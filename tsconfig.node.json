@@ -1,34 +1,28 @@
 {
   "compilerOptions": {
-    /* Language & Environment */
+    /* Environment */
     "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": ["ES2022"],
     "module": "ESNext",
 
-    /* Vite / Bundler */
+    /* Node / Vite */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
     "noEmit": true,
 
-    /* 🔒 IMPORTANT: block implicit type libraries */
-    "types": [],
+    /* 🔒 Prevent unwanted type injection (phoenix / prop-types) */
+    "types": ["node"],
 
-    /* Type Safety */
+    /* Safety */
     "strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-
-    /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "forceConsistentCasingInFileNames": true
   },
 
   "include": [
     "vite.config.ts",
-    "src"
+    "env.d.ts"
   ]
 }
